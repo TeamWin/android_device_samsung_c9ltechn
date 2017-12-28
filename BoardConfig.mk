@@ -65,7 +65,7 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := c9ltechn,c9lte
+TARGET_OTA_ASSERT_DEVICE := c9ltechn
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -89,7 +89,7 @@ TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "sys/class/android_usb/android0/f_mass_storage/lun/file"
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 63
+TW_DEFAULT_BRIGHTNESS := 127
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
