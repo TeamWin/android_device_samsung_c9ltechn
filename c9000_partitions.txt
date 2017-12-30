@@ -1,3 +1,5 @@
+#Detailed device partition information
+
 root@c9ltechn:/ # cat /proc/partitions
 major minor  #blocks  name
 
@@ -95,7 +97,7 @@ lrwxrwxrwx root     root              2016-05-30 03:33 tz -> /dev/block/mmcblk0p
 lrwxrwxrwx root     root              2016-05-30 03:33 userdata -> /dev/block/mmcblk0p41
 
 
-root@c9ltechn:/ # fdisk -l dev/block/mmcblk0
+root@c9ltechn:/ # fdisk -l /dev/block/mmcblk0
 Found valid GPT with protective MBR; using GPT
 
 Disk dev/block/mmcblk0: 122142720 sectors, 2296M
@@ -146,4 +148,18 @@ Number  Start (sector)    End (sector)  Size Name
     39          704512        10108927 4592M system
     40        10108928        10518527  200M cache
     41        10518528       122142679 53.2G userdata
+
+c9ltechn:/ # blkid
+/dev/block/loop0: UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4" 
+/dev/block/mmcblk0p20: UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4" 
+/dev/block/mmcblk0p28: UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4" 
+/dev/block/mmcblk0p35: LABEL="dsp" UUID="af32c008-2a39-7e5b-a5dc-201456d93103" TYPE="ext4" 
+/dev/block/mmcblk0p36: SEC_TYPE="msdos" UUID="00BC-614E" TYPE="vfat" 
+/dev/block/mmcblk0p37: SEC_TYPE="msdos" UUID="00BC-614E" TYPE="vfat" 
+/dev/block/mmcblk0p38: UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4" 
+/dev/block/mmcblk0p39: UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4" 
+/dev/block/mmcblk0p40: UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4" 
+/dev/block/mmcblk0p41: UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4" 
+/dev/block/vnswap0: LABEL="swap" UUID="b19377ca-7847-4917-e5f4-8f9ee546b7c1" TYPE="swap" 
+/dev/block/mmcblk1p1: UUID="9C33-6BBD" TYPE="exfat" 
 
