@@ -21,3 +21,4 @@ on init
     
 service qseecomd /sbin/qseecomd
     disabled
+    seclabel u:r:recovery:s0
